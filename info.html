@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="Learn what the SHHS Warhammer Club is about, what to expect, and how to get in touch.">
+  <title>Club Info | SHHS Warhammer Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <div class="topline"><span>SHHS // Club information</span><span>All experience levels welcome</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SHHS Warhammer Club home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span class="brand-name"><small>SHHS</small>Warhammer Club</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav class="nav-links" id="site-nav" aria-label="Main navigation">
+      <button class="menu-close" type="button" aria-label="Close navigation">&times;</button>
+      <a href="index.html">The club</a>
+      <a href="guide.html">Beginner guide</a>
+      <a href="info.html" aria-current="page">Club info</a>
+      <a class="nav-join" href="mailto:SouthHillsWarHammer@outlook.com">Email the club</a>
+    </nav>
+  </header>
+  <button class="menu-backdrop" type="button" aria-label="Close navigation" tabindex="-1"></button>
+
+  <main>
+    <section class="page-hero" aria-labelledby="info-title">
+      <div class="page-hero__image" aria-hidden="true">
+        <img src="Images/Hero Img/Hero 3.jpg" alt="">
+      </div>
+      <div class="page-hero__content">
+        <p class="eyebrow">The club, at a glance</p>
+        <h1 id="info-title">Find your<br><span>table.</span></h1>
+        <p>A place to play, paint, build, swap ideas, and get pulled into a really good story. Come for the miniatures; stay for the people.</p>
+      </div>
+    </section>
+
+    <section class="paper-section" aria-labelledby="about-title">
+      <p class="section-kicker">What we’re about</p>
+      <h2 id="about-title">The hobby is<br>better together.</h2>
+      <p class="section-intro">The SHHS Warhammer Club brings tabletop battles and miniature hobbying together. Whether you’ve got a whole collection or you’re only curious, there’s a way to take part.</p>
+      <div class="info-grid">
+        <article class="info-point">
+          <span class="step-number">01 / PLAY</span>
+          <h3>Tabletop battles</h3>
+          <p>Learn the game, test a strategy, and see how the story changes with every roll.</p>
+        </article>
+        <article class="info-point">
+          <span class="step-number">02 / MAKE</span>
+          <h3>Miniature hobby</h3>
+          <p>Build and paint tiny characters, personalize a force, and share what you’re working on.</p>
+        </article>
+        <article class="info-point">
+          <span class="step-number">03 / CONNECT</span>
+          <h3>Good company</h3>
+          <p>Meet fellow fans, trade ideas, learn together, and welcome new players to the table.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-section" aria-labelledby="visit-title">
+      <p class="section-kicker">Your first visit</p>
+      <h2 id="visit-title">Curious is<br>all you need.</h2>
+      <p>You don’t need an army, a painting kit, or any experience to say hello. Get in touch first and we’ll help you figure out what to expect and what to bring.</p>
+      <div class="faq-list">
+        <details>
+          <summary>When and where does the club meet?</summary>
+          <p>Ask us for the current meeting schedule and location. We’ll share the latest details directly.</p>
+        </details>
+        <details>
+          <summary>Can I come if I’m brand new?</summary>
+          <p>Absolutely. Tell us you’re new and we can suggest a simple first step, whether that’s watching a game, painting, or learning the basics.</p>
+        </details>
+        <details>
+          <summary>What if I already have an army?</summary>
+          <p>Bring it along when you’ve checked the current meetup details. We’d love to hear what you collect and what you like to play.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="visit-band" aria-labelledby="contact-title">
+      <div>
+        <p class="section-kicker">Come say hello</p>
+        <h2 id="contact-title">Let’s get you<br>to the table.</h2>
+        <p>Message the club for meeting details, beginner questions, or anything else you’d like to know.</p>
+        <div class="contact-row">
+          <a href="mailto:SouthHillsWarHammer@outlook.com"><strong>Email</strong>SouthHillsWarHammer@outlook.com</a>
+          <span><strong>Discord</strong>crashtest.studios</span>
+        </div>
+      </div>
+      <a class="button" href="mailto:SouthHillsWarHammer@outlook.com">Email the club&nbsp; ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><p class="footer-brand">SHHS Warhammer Club</p><p><a href="Home.html">Back to the homepage</a></p></div>
+    <p>Made for the tabletop, made for everyone.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#site-nav");
+    const menuClose = document.querySelector(".menu-close");
+    const menuBackdrop = document.querySelector(".menu-backdrop");
+
+    function setNavigationOpen(isOpen, restoreFocus = true) {
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      navigation.classList.toggle("is-open", isOpen);
+      document.body.classList.toggle("menu-open", isOpen);
+      if (isOpen) menuClose.focus();
+      else if (restoreFocus) menuToggle.focus();
+    }
+
+    menuToggle.addEventListener("click", () => setNavigationOpen(menuToggle.getAttribute("aria-expanded") !== "true"));
+    menuClose.addEventListener("click", () => setNavigationOpen(false));
+    menuBackdrop.addEventListener("click", () => setNavigationOpen(false));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") setNavigationOpen(false);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) return;
+      setNavigationOpen(false, false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760 && menuToggle.getAttribute("aria-expanded") === "true") setNavigationOpen(false, false);
+    });
+  </script>
+</body>
+</html>
