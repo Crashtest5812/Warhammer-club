@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#0b0b0d">
   <meta name="description" content="Find your people, build your army, and make every roll count with the SHHS Warhammer Club.">
   <title>SHHS Warhammer Club | Find Your Table</title>
+  <link rel="icon" type="image/png" href="Images/Favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -132,6 +133,32 @@
     .intro-copy p { margin-bottom: 1.4rem; color: rgba(255,255,255,.76); font-size: 1.08rem; line-height: 1.7; }
     .intro-copy p:last-child { margin-bottom: 0; }
 
+    .cabinet-section { padding: 6.5rem 10.4vw 7rem; background: #0b0b0d; }
+    .cabinet-header { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 2rem; margin-bottom: 2.4rem; }
+    .cabinet-header p:last-child { margin: 0 0 .35rem; color: rgba(255,255,255,.76); line-height: 1.7; }
+    .cabinet-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+    .cabinet-card { display: flex; min-height: 250px; flex-direction: column; padding: 1.5rem 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); }
+    .cabinet-role { display: inline-flex; width: fit-content; margin-bottom: 1.1rem; color: var(--blue); font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .cabinet-card h3 { margin: 0 0 .8rem; font: 800 1.8rem/.96 var(--display); text-transform: uppercase; }
+    .cabinet-card p { margin: 0; color: rgba(255,255,255,.75); font-size: .96rem; line-height: 1.7; }
+
+    .cabinet-application { padding: 0 10.4vw 7rem; background: #0b0b0d; }
+    .cabinet-application__inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem; padding: 2.2rem; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.015); }
+    .cabinet-application__copy p { margin: 0; color: rgba(255,255,255,.76); line-height: 1.7; }
+    .cabinet-form { display: grid; gap: 1rem; }
+    .cabinet-form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .cabinet-form label { display: grid; gap: .5rem; color: rgba(255,255,255,.82); font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .cabinet-form input, .cabinet-form select, .cabinet-form textarea {
+      width: 100%; padding: .9rem 1rem; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.02); color: var(--ink); font: inherit;
+    }
+    .cabinet-form textarea { min-height: 140px; resize: vertical; }
+    .cabinet-form input:focus, .cabinet-form select:focus, .cabinet-form textarea:focus { outline: 1px solid var(--blue); }
+    .cabinet-form button {
+      justify-self: start; min-height: 48px; padding: 0 1.3rem; border: 1px solid var(--blue); background: var(--blue); color: white; font: 700 .74rem var(--body); letter-spacing: .12em; text-transform: uppercase; cursor: pointer;
+    }
+    .cabinet-form button:hover { background: var(--blue-deep); }
+    .cabinet-form__note { margin-top: .2rem; color: rgba(255,255,255,.62); font-size: .82rem; }
+
     .quest-section { padding: 6.5rem 10.4vw 7rem; background: #0b0b0d; }
     .quest-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.6rem; }
     .quest-heading h2 { max-width: 500px; }
@@ -197,6 +224,12 @@
       .hero-stamp { right: 7vw; bottom: 1rem; font-size: .56rem; }
       .intro-section { grid-template-columns: 1fr; gap: 2rem; padding: 5rem 7vw; }
       h2 { font-size: clamp(3rem, 12vw, 4.4rem); }
+      .cabinet-section { padding: 5rem 7vw; }
+      .cabinet-header { grid-template-columns: 1fr; }
+      .cabinet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cabinet-application { padding: 0 7vw 5rem; }
+      .cabinet-application__inner { grid-template-columns: 1fr; padding: 1.3rem; }
+      .cabinet-form__row { grid-template-columns: 1fr; }
       .quest-section { padding: 5rem 7vw; }
       .quest-heading { align-items: flex-start; flex-direction: column; gap: 1rem; }
       .quest-heading > p { margin-bottom: 0; }
@@ -231,6 +264,7 @@
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
     <nav class="nav-links" id="site-nav" aria-label="Main navigation">
       <a href="#club">The club</a>
+      <a href="#cabinet">Club cabinet</a>
       <a href="guide.html">Beginner guide</a>
       <a href="info.html">Club info</a>
       <a class="nav-join" href="mailto:SouthHillsWarHammer@outlook.com">Email the club</a>
@@ -271,6 +305,78 @@
       <div class="intro-copy reveal">
         <p>Warhammer is a universe of mighty armies, unlikely heroes, and stories that unfold one dice roll at a time. At SHHS, you can learn the game, build your first mini, or bring an army you’ve been working on for years.</p>
         <p>No experience needed. We’re here to share what we love, help each other learn, and make something awesome together.</p>
+      </div>
+    </section>
+
+    <section class="cabinet-section" id="cabinet" aria-labelledby="cabinet-title">
+      <div class="cabinet-header reveal">
+        <div>
+          <p class="section-kicker">The club cabinet</p>
+          <h2 id="cabinet-title">The people behind the table.</h2>
+        </div>
+        <p>From planning game nights to helping new players settle in, the cabinet keeps the club welcoming, organized, and ready for the next battle.</p>
+      </div>
+      <div class="cabinet-grid reveal">
+        <article class="cabinet-card">
+          <span class="cabinet-role">President Adrian Virrueta(2026) </span>
+          <h3>Lead the table</h3>
+          <p>Sets the club’s direction, keeps things running smoothly, and helps members feel at home.</p>
+        </article>
+        <article class="cabinet-card">
+          <span class="cabinet-role">Vice President Elyjah Mason(2026) </span>
+          <h3>Back the plans</h3>
+          <p>Supports club operations, keeps events moving, and makes sure no one gets left out.</p>
+        </article>
+        <article class="cabinet-card">
+          <span class="cabinet-role">Treasurer Liam Virrueta(2026) </span>
+          <h3>Keep it funded</h3>
+          <p>Tracks club resources, keeps spending organized, and helps make the hobby accessible.</p>
+        </article>
+        <article class="cabinet-card">
+          <span class="cabinet-role">Secretary Taylor Bishop(2026) </span>
+          <h3>Keep it together</h3>
+          <p>Handles communication, schedules, and the details that make club life easy to follow.</p>
+        </article>
+        <article class="cabinet-card">
+          <span class="cabinet-role">Outreach Liam Soto(2026) </span>
+          <h3>Bring people in</h3>
+          <p>Welcomes new members, answers questions, and helps the club grow with a friendly face.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cabinet-application" id="cabinet-application" aria-labelledby="cabinet-application-title">
+      <div class="cabinet-application__inner reveal">
+        <div class="cabinet-application__copy">
+          <p class="section-kicker">Run for cabinet</p>
+          <h2 id="cabinet-application-title">Bring your ideas to the table.</h2>
+          <p>Interested in helping lead the club? Fill out the form and it will open a prefilled email to SouthHillsWarHammer@outlook.com so your application is ready to send.</p>
+        </div>
+        <form class="cabinet-form" id="cabinet-form">
+          <div class="cabinet-form__row">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              Position
+              <select name="position" required>
+                <option value="">Choose a role</option>
+                <option>President</option>
+                <option>Vice President</option>
+                <option>Treasurer</option>
+                <option>Secretary</option>
+                <option>Outreach</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Why you want to run
+            <textarea name="message" placeholder="Tell the club why you want to serve on cabinet and what you’d bring to the role." required></textarea>
+          </label>
+          <button type="submit">Send application</button>
+          <div class="cabinet-form__note">This opens your default email app with a message ready to send.</div>
+        </form>
       </div>
     </section>
 
@@ -342,6 +448,7 @@
       },
     };
 
+    const cabinetForm = document.querySelector("#cabinet-form");
     const questTabs = [...document.querySelectorAll(".quest-tab")];
     const questPanel = document.querySelector("#quest-panel");
     const menuToggle = document.querySelector(".menu-toggle");
@@ -366,6 +473,27 @@
 
     document.addEventListener("visibilitychange", scheduleHeroSlide);
     scheduleHeroSlide();
+
+    if (cabinetForm) {
+      cabinetForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(cabinetForm);
+        const name = (formData.get("name") || "").toString().trim();
+        const position = (formData.get("position") || "").toString().trim();
+        const message = (formData.get("message") || "").toString().trim();
+
+        const subject = `Cabinet application: ${position}`;
+        const body = [
+          `Name: ${name}`,
+          `Position: ${position}`,
+          "",
+          "Why I want to run:",
+          message,
+        ].join("\n");
+
+        window.location.href = `mailto:SouthHillsWarHammer@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    }
 
     function selectQuest(tab, moveFocus = false) {
       questTabs.forEach((item) => {
