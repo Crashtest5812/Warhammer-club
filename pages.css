@@ -21,7 +21,7 @@ a { color: inherit; }
 .topline span:last-child { color: rgba(255,255,255,.75); }
 .site-header { position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 84px; padding: 0 5.2vw; border-bottom: 1px solid var(--rule); background: #0b0b0d; }
 .brand { display: inline-flex; flex-shrink: 0; align-items: center; gap: .8rem; text-decoration: none; }
-.brand-mark { display: grid; width: 42px; aspect-ratio: 1; place-items: center; border: 1px solid var(--blue); color: var(--blue); font: 800 1.15rem var(--display); transform: rotate(-3deg); }
+.brand-mark { display: block; width: 42px; aspect-ratio: 1; object-fit: contain; }
 .brand-name { display: grid; gap: .06rem; font: 800 1.05rem/.94 var(--display); letter-spacing: .04em; text-transform: uppercase; }
 .brand-name small { color: var(--muted); font: 600 .66rem var(--body); letter-spacing: .15em; }
 .nav-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: clamp(1.2rem, 3vw, 3.4rem); }
