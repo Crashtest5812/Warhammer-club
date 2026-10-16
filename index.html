@@ -178,6 +178,10 @@
     .welcome .section-kicker { color: rgba(255,255,255,.7); }
     .welcome h2 { max-width: 650px; font-size: clamp(2.8rem, 5vw, 5rem); }
     .welcome p { max-width: 610px; margin: 1rem 0 0; color: rgba(255,255,255,.8); line-height: 1.6; }
+    .meeting-details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: 760px; margin: 1.5rem 0 0; }
+    .meeting-details div { padding-top: .8rem; border-top: 1px solid var(--rule); }
+    .meeting-details dt { margin-bottom: .35rem; color: rgba(255,255,255,.65); font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .meeting-details dd { margin: 0; font-weight: 600; line-height: 1.5; }
     .contact-list { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; margin: 1.35rem 0 0; padding: 0; list-style: none; }
     .contact-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; font-size: .9rem; }
     .contact-list strong { color: rgba(255,255,255,.7); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
@@ -245,6 +249,7 @@
       .welcome { grid-template-columns: 1fr; padding: 3.8rem 7vw; }
       .welcome::after { right: -28%; }
       .welcome h2 { font-size: clamp(2.8rem, 11vw, 4rem); }
+      .meeting-details { grid-template-columns: 1fr; gap: .8rem; }
       .welcome .button { justify-self: start; }
       footer { align-items: flex-start; flex-direction: column; padding: 1.8rem 7vw; }
       .photo-credit { text-align: left; }
@@ -422,7 +427,12 @@
       <div class="reveal">
         <p class="section-kicker">New to SHHS Warhammer Club?</p>
         <h2 id="welcome-title">New to the hobby?<br>Start with a question.</h2>
-        <p>You don’t need an army, a painting kit, or previous experience to get in touch. Email us to ask about club activities, meeting details, or how to start.</p>
+        <dl class="meeting-details" aria-label="Club meeting details">
+          <div><dt>When</dt><dd>Fridays at lunch</dd></div>
+          <div><dt>Where</dt><dd>Room 925</dd></div>
+          <div><dt>Who</dt><dd>Students</dd></div>
+        </dl>
+        <p>Meetings include an introduction to miniature assembly and painting. You don’t need an army to come; email ahead to ask what supplies to bring.</p>
         <ul class="contact-list" aria-label="Club contact information">
           <li><strong>Email</strong><a href="mailto:SouthHillsWarHammer@outlook.com">SouthHillsWarHammer@outlook.com</a></li>
           <li><strong>Discord</strong><span>crashtest.studios</span></li>
