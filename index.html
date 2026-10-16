@@ -98,7 +98,7 @@
     .hero-image { position: absolute; inset: 0 0 0 39%; overflow: hidden; }
     .hero-image-track { display: flex; width: 600%; height: 100%; transition: transform .8s cubic-bezier(.22,.61,.36,1); }
     .hero-image-slide { flex: 0 0 16.666667%; width: 16.666667%; height: 100%; }
-    .hero-image-slide img { width: 100%; height: 100%; object-fit: cover; object-position: 53% center; filter: grayscale(1); }
+    .hero-image-slide img { width: 100%; height: 100%; object-fit: cover; object-position: 53% center; }
     .hero-copy {
       position: relative;
       z-index: 2;
@@ -139,7 +139,8 @@
     .cabinet-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
     .cabinet-card { display: flex; min-height: 250px; flex-direction: column; padding: 1.5rem 1.2rem 1.4rem; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); }
     .cabinet-role { display: inline-flex; width: fit-content; margin-bottom: 1.1rem; color: var(--blue); font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    .cabinet-card h3 { margin: 0 0 .8rem; font: 800 1.8rem/.96 var(--display); text-transform: uppercase; }
+    .cabinet-card h3 { margin: 0 0 .35rem; font: 800 1.8rem/.96 var(--display); text-transform: uppercase; }
+    .cabinet-term { margin-bottom: .8rem; color: var(--muted); font-size: .76rem; }
     .cabinet-card p { margin: 0; color: rgba(255,255,255,.75); font-size: .96rem; line-height: 1.7; }
 
     .cabinet-application { padding: 0 10.4vw 7rem; background: #0b0b0d; }
@@ -202,6 +203,9 @@
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .reveal { opacity: 1; transform: none; }
     }
+    @media (max-width: 1000px) {
+      .cabinet-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
     @media (max-width: 760px) {
       .topline { padding: .6rem 5vw; font-size: .58rem; }
       .topline span:last-child { display: none; }
@@ -248,6 +252,11 @@
       .welcome .button { justify-self: start; }
       footer { align-items: flex-start; flex-direction: column; padding: 1.8rem 7vw; }
       .photo-credit { text-align: left; }
+    }
+    @media (max-width: 420px) {
+      .cabinet-card { padding: 1.2rem .85rem; }
+      .cabinet-card h3 { font-size: 1.55rem; }
+      .cabinet-role { font-size: .62rem; }
     }
   </style>
 </head>
@@ -318,29 +327,34 @@
       </div>
       <div class="cabinet-grid reveal">
         <article class="cabinet-card">
-          <span class="cabinet-role">President Adrian Virrueta(2026) </span>
-          <h3>Lead the table</h3>
-          <p>Sets the club’s direction, keeps things running smoothly, and helps members feel at home.</p>
+          <span class="cabinet-role">President</span>
+          <h3>Adrian Virrueta</h3>
+          <span class="cabinet-term">Term: 2026</span>
+          <p>Sets club direction and helps members feel welcome.</p>
         </article>
         <article class="cabinet-card">
-          <span class="cabinet-role">Vice President Elyjah Mason(2026) </span>
-          <h3>Back the plans</h3>
-          <p>Supports club operations, keeps events moving, and makes sure no one gets left out.</p>
+          <span class="cabinet-role">Vice President</span>
+          <h3>Elyjah Mason</h3>
+          <span class="cabinet-term">Term: 2026</span>
+          <p>Supports club operations, keeps events moving, and helps members feel included.</p>
         </article>
         <article class="cabinet-card">
-          <span class="cabinet-role">Treasurer Liam Virrueta(2026) </span>
-          <h3>Keep it funded</h3>
-          <p>Tracks club resources, keeps spending organized, and helps make the hobby accessible.</p>
+          <span class="cabinet-role">Treasurer</span>
+          <h3>Liam Virrueta</h3>
+          <span class="cabinet-term">Term: 2026</span>
+          <p>Tracks club resources and organizes spending to support access to the hobby.</p>
         </article>
         <article class="cabinet-card">
-          <span class="cabinet-role">Secretary Taylor Bishop(2026) </span>
-          <h3>Keep it together</h3>
-          <p>Handles communication, schedules, and the details that make club life easy to follow.</p>
+          <span class="cabinet-role">Secretary</span>
+          <h3>Taylor Bishop</h3>
+          <span class="cabinet-term">Term: 2026</span>
+          <p>Manages club communication and schedules so members can follow what’s happening.</p>
         </article>
         <article class="cabinet-card">
-          <span class="cabinet-role">Outreach Liam Soto(2026) </span>
-          <h3>Bring people in</h3>
-          <p>Welcomes new members, answers questions, and helps the club grow with a friendly face.</p>
+          <span class="cabinet-role">Outreach</span>
+          <h3>Liam Soto</h3>
+          <span class="cabinet-term">Term: 2026</span>
+          <p>Welcomes new members, answers questions, and supports club growth.</p>
         </article>
       </div>
     </section>
